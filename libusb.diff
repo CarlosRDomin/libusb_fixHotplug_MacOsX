@@ -1,0 +1,13 @@
+diff --git a/libusb/os/darwin_usb.c b/libusb/os/darwin_usb.c
+index b0219d1..2966980 100644
+--- a/libusb/os/darwin_usb.c
++++ b/libusb/os/darwin_usb.c
+@@ -2056,7 +2056,7 @@ const struct usbi_os_backend darwin_backend = {
+         .get_device_descriptor = darwin_get_device_descriptor,
+         .get_active_config_descriptor = darwin_get_active_config_descriptor,
+         .get_config_descriptor = darwin_get_config_descriptor,
+-        .hotplug_poll = darwin_hotplug_poll,
++        .hotplug_poll = NULL, //darwin_hotplug_poll,
+
+         .open = darwin_open,
+         .close = darwin_close,
